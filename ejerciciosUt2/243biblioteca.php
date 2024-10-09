@@ -1,22 +1,27 @@
 <?php
-declare(strict_types()=1)
-function suma(int $num1, int $num2):int
+declare(strict_types=1);
+function sumar(...$entrada):float
 {
-return $num1+$num2;
+    $resultado=0;
+    foreach($entrada as $valor)
+    {
+        $resultado+=$valor;
+    }
+    return $resultado; 
 }
 
-function resta(int $num1, int $num2):int
+function restar($num1=0,$num2=0):float
 {
-return $num1-$num2;
+    return $num1-$num2; 
 }
 
-function multiplicacion(int $num1, int $num2):int
+function multiplicar($num1,$num2):float
 {
-return $num1*$num2;
+    return $num1*$num2; 
 }
 
-function division(int $num1, int $num2):int
+function dividir($num1,$num2=1):float
 {
-return $num1/$num2;
+    return $num1/$num2; 
 }
 ?>
